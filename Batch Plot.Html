@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Batch Plotter</title>
+		<meta http-equiv="x-ua-compatible" content="IE=8">
+		<hta:application 
+			 applicationname="Batch Plotter"
+			 border="thin"
+			 scroll="no"
+			 singleinstance="yes"
+			 windowstate="windowed"
+			 maximizebutton="no"
+			 icon="Scripts\Batch Plot.Ico"
+			 caption="yes" >
+		<link rel="stylesheet" type="text/css" href="Scripts\Window.css" />
+	</head>
+	<script language="vbscript" src="Scripts\Constants.vbs"></script>
+	<script language="vbscript" src="Scripts\Automation.vbs"></script>
+	<script language="vbscript" src="Scripts\Scripting.vbs"></script>
+	<script language="vbscript" src="Scripts\Base.vbs"></script>
+	<script language="vbscript" src="Scripts\ActiveFolders.vbs"></script>
+<body id="pBody">
+    <div class="header">
+        <table width="100%">
+            <tr>
+                <td>
+                    <img src="Scripts\Logo.png" width="275" height="64">
+                    <span id="Program"></span>
+                </td>
+                <td align="right">
+                    <span id="AcadVersion"><div class="blink">Autocad not yet linked. Batch plot to connect.</div></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="dBody">
+	<div id="Foldertext"></div>
+	<table width="100%">
+		<tr>
+			<td width="70%">
+				<button id="bRefresh"></button>
+				<button id="Getfolder"></button>
+				<span style="float: right;">
+					<button id="aCancel"></button>&nbsp;&nbsp;&nbsp;
+					<button id="Bbplot"></button>
+				</span>
+				<br><select id="ActiveFolders" style="margin-top: 10px;">Select Folder</select>
+				<select id="Sfolderlist" size="10" multiple style="margin-top: 10px;"></select>
+				<button id="Selall" style="margin-top: 10px;"></button>
+				<div id="Fprintprogress">Select Documents.</div>
+			</td>
+			<td width="30%" align="right" id="brplot">
+				<br><select id="Plotroutine"></select><br><br>
+				<br><span id="sCommand">
+					Enter Command:&nbsp;<input id="tCommand" type="text" size="15" />
+				</span>
+			</td>
+		</tr>
+	</table>
+	<div id="Fprint"></div>
+	<br><br><br><br>
+    </div>
+    <div id="Quitdiv">
+        <div id="Dversion"></div>
+        <button id="Quitbut"></button>
+    </div>
+</body>
+</html>
